@@ -1,0 +1,45 @@
+
+h1,
+h2 {
+  text-align: center;
+  text-shadow: 1px 0px #000;
+}
+body {
+  margin: 0 auto;
+  font-family: "Bona Nova", serif;
+  background:linear-gradient(-45deg, #1273FF, #39B9FB, #23a6d5,#a9cadd);
+}
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.card-img-top {
+  border: 1px solid #000;
+}
+.lead {
+  font-size: 19px;
+  text-align: justify;text-transform: capitalize;
+}
+p.card-text {
+  text-align: justify;
+}
+.card {
+  border: 2px solid #000;
+}
+hr {
+  border-top: 3px solid rgb(0 150 150);
+}
+
+/*Animation on load*/
+.fade-in-music{
+    animation: fadeInAnimation 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
