@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
     <title>Music-Bootstrap</title>
    
   </head>
@@ -63,7 +64,7 @@
     -->
       <!--section Jumborton-->
     <div class="container">
-      <div class="jumbotron jumbotron-fluid fade-in-music">
+      <div id="new" class="jumbotron jumbotron-fluid fade-in-music">
         <div class="container">
           <h1 class="display-4">My Music Album</h1>
           <p class="lead"> Vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
@@ -78,6 +79,7 @@
             quam semper libero, si</p>
         </div>
       </div>
+  <button onclick="deleteClass()" type="button" class="btn btn-secondary">delete row</button>
     </div>
 
 
@@ -86,12 +88,17 @@
         Use the elements of a card to display nicely the album informations such as album title, artist, year, etc..
     -->
 
+    <!-- EXERCISE 3
+        Foreach album in the favorite list, place a badge on top of it with the genre of the album
+    -->
+
       <!--Section of favoruite Album-->
       <div class="container">
         <h2>Favoruite Album</h2>
         <div class="row">
           <div class="col-sm m-2 p-3">
             <div class="card  p-3 mb-5 rounded   bg-light ">
+              <span class="badge badge-secondary mb-3 p-3">Secondary</span>
               <img
                 src="https://m.media-amazon.com/images/I/81mu7MqAfOS._SS500_.jpg"
                 class="card-img-top"
@@ -107,8 +114,8 @@
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="card-footer">
-                  <small class="text-black-50" ><h6>Author: Consectetur Adipiscing</h6></small>
-                  <small class="text-black-50" ><h6>Release Date: 03/11/2011</h6>&nbsp; </small>
+                  <h6>Author: Consectetur Adipiscing</h6>
+                  <h6>Release Date: 03/11/2011</h6>
                 </div>
               </div>
             </div>
@@ -116,6 +123,7 @@
 
           <div class="col-sm m-2 p-3">
             <div class="card  p-3 mb-5  bg-light rounded">
+              <span class="badge badge-secondary mb-3 p-3">Secondary</span>
               <img
                 src="https://m.media-amazon.com/images/I/91Jb+YzNLkS._SS500_.jpg" class="card-img-top" alt="Take a Leap of Faith"/>
               <div class="card-body">
@@ -127,8 +135,8 @@
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="card-footer">
-                  <small class="text-black-50" ><h6>Author: Consectetur Adipiscing</h6></small>
-                  <small class="text-black-50" ><h6>Release Date: 03/11/2011</h6>&nbsp; </small>
+                  <h6>Author: Consectetur Adipiscing</h6>
+                  <h6>Release Date: 03/11/2011</h6>
                 </div>
               </div>
             </div>
@@ -136,6 +144,7 @@
 
           <div class="col-sm m-2 p-3">
             <div class="card  p-3 mb-5   bg-light rounded">
+              <span class="badge badge-secondary mb-3 p-3">Secondary</span>
               <img
                 src="https://m.media-amazon.com/images/I/71Czg+4skDL._SS500_.jpg"
                 class="card-img-top" alt="SOUR [Explicit]" />
@@ -148,8 +157,8 @@
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="card-footer">
-                  <small class="text-black-50" ><h6>Author: Consectetur Adipiscing</h6></small>
-                  <small class="text-black-50" ><h6>Release Date: 03/11/2011</h6>&nbsp; </small>
+                  <h6>Author: Consectetur Adipiscing</h6>
+                  <h6>Release Date: 03/11/2011</h6>
                 </div>
               </div>
             </div>
@@ -157,6 +166,49 @@
         </div>
       </div>
       <hr />
+
+      <!-- EXERCISE 4
+        Create a section with an album tracklist inside a Bootstrap table.
+        The row colors of the table must be alternated.
+
+        There should be a column for the track order number, one for the title and one for the track duration.
+        (If you want, you can also add extra columns)
+    -->
+      <!--Tabel for track record-->
+      <div class="container">
+        <h2>Album Tracklist</h2>
+        <div class="table-responsive">
+          <table class="table table-striped ">
+            <thead>
+              <tr class=" p-5 " >
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  class=" p-5 ">
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>3:40</td>
+              </tr>
+              <tr  class=" p-5 " >
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>2:49</td>
+              </tr>
+              <tr  class=" p-5 " >
+                <th scope="row">3</th>
+                <td >Larry the Bird</td>
+                <td>1:40</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+
       <!--Album I don't like-->
       <div class="container">
         <h2>Least Favoruite Album</h2>
@@ -223,6 +275,33 @@
           </div>
         </div>
       </div>
+
+    <!-- EXERCISE 7
+        On the click of "Add Track" button, a modal should appear.
+        (check in the documentation the modal+button example)
+        
+        The modal shall contain input fields with (avoid using a <form>):
+        - Track number
+        - Track title
+        - Track duration
+        - Track featuring
+        - Live Track (checkbox)
+
+        The fields should be inside an Input Group and divided in 2 columns.
+    -->
+    <!--Modal + Button-->
+    <div class="container">
+      
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-body">
+    <h5>Popover in a modal</h5>
+    <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+    <hr>
+    <h5>Tooltips in a modal</h5>
+    <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+  </div>
+</div>
+    </div>
       <!--Footer-->
       <div class="container">
         <footer>
@@ -236,5 +315,6 @@
    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+   
   </body>
 </html>

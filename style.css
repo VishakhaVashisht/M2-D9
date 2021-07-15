@@ -7,7 +7,6 @@ h2 {
 body {
   margin: 0 auto;
   font-family: "Bona Nova", serif;
-  background:linear-gradient(-45deg, #1273FF, #39B9FB, #23a6d5,#a9cadd);
 }
 .card:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -43,3 +42,20 @@ hr {
         opacity: 1;
     }
 }
+
+.badge-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-shadow: 0px 2px #adb5bd;
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #6c757d;
+    border: none;
+    opacity: 0.5;
+}
+.table{font-size: 1.3rem;}
